@@ -158,9 +158,6 @@ namespace FormDeneme
             lblEmail.Visible = false;
         }
 
-        private void txtPhoneNumber_Enter(object sender, EventArgs e)
-        {
-            lblPhoneNumber.Visible = false;
-        }
+        
     }
 }

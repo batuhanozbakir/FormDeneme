@@ -38,12 +38,12 @@
             txtSurname = new TextBox();
             txtName = new TextBox();
             gBoxStep2 = new GroupBox();
+            mTxtPhoneNumber = new MaskedTextBox();
             btnBackStep2 = new Button();
             txtAddress = new TextBox();
             btnNextStep2 = new Button();
             lblPhoneNumber = new Label();
             lblEmail = new Label();
-            txtPhoneNumber = new TextBox();
             txtEmail = new TextBox();
             gBoxStep3 = new GroupBox();
             cBoxOther = new CheckBox();
@@ -56,7 +56,6 @@
             cBoxSport = new CheckBox();
             btnBackStep3 = new Button();
             btnSave = new Button();
-            mTxtPhoneNumber = new MaskedTextBox();
             gBoxStep1.SuspendLayout();
             gBoxStep2.SuspendLayout();
             gBoxStep3.SuspendLayout();
@@ -168,6 +167,14 @@
             gBoxStep2.TabStop = false;
             gBoxStep2.Text = "Adım 2 | İletişim Bilgileri";
             // 
+            // mTxtPhoneNumber
+            // 
+            mTxtPhoneNumber.Location = new Point(0, 54);
+            mTxtPhoneNumber.Mask = "(999) 000-0000";
+            mTxtPhoneNumber.Name = "mTxtPhoneNumber";
+            mTxtPhoneNumber.Size = new Size(153, 23);
+            mTxtPhoneNumber.TabIndex = 9;
+            // 
             // btnBackStep2
             // 
             btnBackStep2.BackColor = Color.SeaGreen;
@@ -225,15 +232,6 @@
             lblEmail.Text = "Bu alan zorunludur";
             lblEmail.TextAlign = ContentAlignment.MiddleLeft;
             lblEmail.Visible = false;
-            // 
-            // txtPhoneNumber
-            // 
-            txtPhoneNumber.Location = new Point(529, 189);
-            txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.PlaceholderText = "Telefon Numaranız";
-            txtPhoneNumber.Size = new Size(159, 23);
-            txtPhoneNumber.TabIndex = 1;
-            txtPhoneNumber.Enter += txtPhoneNumber_Enter;
             // 
             // txtEmail
             // 
@@ -365,14 +363,6 @@
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
-            // mTxtPhoneNumber
-            // 
-            mTxtPhoneNumber.Location = new Point(0, 54);
-            mTxtPhoneNumber.Mask = "(999) 000-0000";
-            mTxtPhoneNumber.Name = "mTxtPhoneNumber";
-            mTxtPhoneNumber.Size = new Size(153, 23);
-            mTxtPhoneNumber.TabIndex = 9;
-            // 
             // UserRegister
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -381,7 +371,6 @@
             Controls.Add(gBoxStep3);
             Controls.Add(gBoxStep2);
             Controls.Add(gBoxStep1);
-            Controls.Add(txtPhoneNumber);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "UserRegister";
             StartPosition = FormStartPosition.CenterScreen;
@@ -394,7 +383,6 @@
             gBoxStep3.ResumeLayout(false);
             gBoxStep3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -412,7 +400,6 @@
         private Button btnNextStep2;
         private Label lblPhoneNumber;
         private Label lblEmail;
-        private TextBox txtPhoneNumber;
         private TextBox txtEmail;
         private Button btnBackStep2;
         private GroupBox gBoxStep3;
